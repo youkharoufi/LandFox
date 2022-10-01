@@ -9,7 +9,7 @@ import { Item } from '../models/item';
 })
 export class ItemsService {
 
-  apiURLItems = environment.apiURL + 'items';
+  apiURLItems = 'https://landfox.herokuapp.com/fox/api/items';
 
   constructor(private http : HttpClient) { }
 
