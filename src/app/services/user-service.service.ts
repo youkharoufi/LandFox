@@ -18,7 +18,11 @@ export class UserServiceService {
     return this.http.post<{token:string, user:string, isAdmin:boolean}>(`${this.apiURLUsers}/login`, {email, password}).pipe(
       map(userInfo =>{
         localStorage.setItem('user', userInfo.user);
-        localStorage.setItem('userAdmin', JSON.stringify(userInfo.isAdmin));
+        if(userInfo.isAdmin !== undefined){
+          localStorage.setItem('userAdmin', JSON.stringify(userInfo.isAdmin));
+        }else{
+          localStorage.setItem('userAdmin', JSON.stringify(false));
+        }
         localStorage.setItem('token', userInfo.token);
         this.router.navigate(['/']);
         return userInfo;
