@@ -23,7 +23,7 @@ export class UserServiceService {
         }else{
           localStorage.setItem('userAdmin', JSON.stringify(false));
         }
-        localStorage.setItem('token', userInfo.token);
+        //localStorage.setItem('token', userInfo.token);
         this.router.navigate(['/']);
         return userInfo;
       })
