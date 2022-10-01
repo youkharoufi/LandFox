@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL:'http://localhost:3000/fox/api/'
+  apiURL:'https://landfox.herokuapp.com/fox/api/'
 };
