@@ -130,13 +130,12 @@ export class ItemFormComponent implements OnInit {
       this.addItem(itemData);
     }
 
-    this.itemService.getAllItems().subscribe(
-      (items)=>{
+    this.itemService.getAllItems()
+    
         setTimeout(()=>{
           this.router.navigate(['/items/list'])
-        })
-      }
-    )
+      
+      },2000)
   }
 
 }
