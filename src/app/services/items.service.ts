@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Item } from '../models/item';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Item } from '../models/item';
 })
 export class ItemsService {
 
-  apiURLItems = 'https://landfox.herokuapp.com/fox/api/items';
+  apiURLItems = environment.apiURL + 'items';
 
   constructor(private http : HttpClient) { }
 
