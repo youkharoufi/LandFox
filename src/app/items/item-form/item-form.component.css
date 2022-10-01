@@ -1,0 +1,12 @@
+.global{
+    text-align: center;
+}
+
+button {
+    margin:15px
+}
+
+.input {
+    margin-left:55px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+example-form-field {
+    width:200px;
+}
+
+.global {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.center {
+    display:flex;
+}
+
+.image-left{
+    animation:backInLeft;
+    animation-duration:3s
+}
+
+.image-right{
+    animation:backInRight;
+    animation-duration:3s
+}
+
+.btn {
+    text-align: center;
+    margin:15px
+}
+
+.links {
+    text-align: center;
+}

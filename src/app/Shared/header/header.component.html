@@ -1,0 +1,53 @@
+<div class="global">
+    <div class="L1">
+        <div class="logo-position">
+            <img src="assets/images/logo.png" height="200px" width="200px">
+        </div>
+        <div class="cart-position">
+            <img class="advance" src="assets/images/cart.png" height="150px" width="150px">
+        </div>
+        <div class="creds">
+            <a routerLink="/users/login" *ngIf="!getLoggedStatus()">Login</a>
+        </div>
+        <div>
+            <a routerLink="/users/register" *ngIf="!getLoggedStatus()">Register</a>
+        </div>
+        <div>
+            <a routerLink="/users/login" (click)="logout()" *ngIf="getLoggedStatus()">Logout</a>
+        </div>
+        <div class="icons">
+            <button mat-icon-button color="primary" routerLink="/">
+                <mat-icon>home</mat-icon>
+            </button>
+        
+            <button class="left-space" mat-icon-button color="primary" routerLink="/users/signup">
+                <mat-icon>person_outline</mat-icon>
+            </button>
+    
+            <button routerLink="/cart" class="left-space" mat-icon-button color="accent">
+                <mat-icon [matBadge]="cartCount" matBadgeColor="warn" >add_shopping_cart</mat-icon>
+            </button>
+        </div>
+    </div>
+    
+    <div class="L2">
+        <div>
+            <a routerLink="/">Items</a>
+        </div>
+        <div>
+            <a routerLink="/categories/list" *ngIf="userIsAdmin">Categories</a>
+        </div>
+        <div>
+            <a routerLink="/users/list" *ngIf="userIsAdmin" >Users</a>
+        </div>
+        <div>
+            <a routerLink="/items/list" *ngIf="userIsAdmin" >Manage Items</a>
+        </div>
+        
+    </div>
+    </div>
+    
+    <div class="foxy">
+    
+        
+    </div>

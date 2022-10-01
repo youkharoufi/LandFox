@@ -1,0 +1,34 @@
+.global {
+    display:flex;
+    flex-direction: row;
+}
+
+.column {
+    display:flex;
+    flex-direction:column;
+}
+
+table {
+    width:400px;
+    margin-top:200px;
+}
+
+button {
+    margin:10px;
+}
+
+table tr {
+    width:200px;
+    text-align: center;
+}
+
+th td {
+    text-align: center;
+}
+
+div .fox-head {
+    text-align: center;
+    margin-left:100px;
+    animation:backInRight;
+    animation-duration: 3s;
+}

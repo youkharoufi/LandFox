@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 400px;
+    margin:10px;
+  }
+.example-header-image {
+    background-image: url('../../../assets/images/logo.png');
+    background-size: cover;
+  }
+
+.global {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dropdown{
+    display:flex;
+    justify-content: center;
+    margin:5px;
+}
+
+.search {
+    position:absolute;
+    right:100px;
+}
+
+
+    

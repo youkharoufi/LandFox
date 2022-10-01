@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+.under{
+    margin:10px;
+}
+
+.global {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.centered {
+    text-align: center;
+    color:rgb(142, 92, 188);
+    animation:shakeY;
+    animation-duration:3s;
+}
+
+.rightToLeft {
+    animation:slideInRight;
+    animation-duration: 4s;
+}
+
+.btn-valid {
+    text-align: center;
+    margin:15px;
+}

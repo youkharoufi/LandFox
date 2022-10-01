@@ -1,0 +1,103 @@
+
+<div class="dropdown">
+<mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select (selectionChange)="changeClient($event.value)">
+      <mat-option value="All">All</mat-option>
+      <mat-option *ngFor="let category of categories" [value]="category?.name">{{category.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <form [formGroup]="searchForm">
+    <div class="search">
+        <mat-form-field appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Items" formControlName="term">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Already know what you're looking for ?</mat-hint>
+        </mat-form-field>
+        
+            <button style="margin:5px;" mat-raised-button color="accent" (click)="onSubmit()">Search</button>
+        
+    </div>
+  </form>
+</div>
+
+<div *ngIf="!searchLaunch">
+<div class="global">
+<div *ngFor="let item of items">
+    <div *ngIf="showList">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{item.name}}</mat-card-title>
+    <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+    <mat-card-subtitle>{{item.category.name}} <mat-icon>{{item.category.categoryType}}</mat-icon></mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="item.image" style="max-height:250px" alt="image">
+  <mat-card-content>
+    <p>
+      {{item.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="forwardToSingleItem(item._id)">See Details</button>
+    <button mat-button>LIKE</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>
+</div>
+</div>
+
+<div *ngIf="!searchLaunch">
+<div class="global">
+    <div *ngFor="let item of items">
+        <div *ngIf="item.category.name === filter">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.category.name}} <mat-icon>{{item.category.categoryType}}</mat-icon></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" style="max-height:250px" alt="image">
+      <mat-card-content>
+        <p>
+          {{item.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="forwardToSingleItem(item._id)">See Details</button>
+        <button mat-button>LIKE</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+    </div>
+</div>
+</div>
+
+<div *ngIf="searchLaunch">
+<div class="global">
+    <div *ngFor="let item of searchDataFiltered">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.category.name}} <mat-icon>{{item.category.categoryType}}</mat-icon></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" style="max-height:250px" alt="image">
+      <mat-card-content>
+        <p>
+          {{item.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="forwardToSingleItem(item._id)">See Details</button>
+        <button mat-button>LIKE</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+    </div>
+</div>

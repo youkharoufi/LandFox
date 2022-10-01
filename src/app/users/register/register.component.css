@@ -1,0 +1,18 @@
+.global {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.image-right {
+    animation:zoomIn;
+    animation-duration:3s;
+}
+
+.center {
+    display:flex
+}
+
+.btn {
+    text-align: center;
+}

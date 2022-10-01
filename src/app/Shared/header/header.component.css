@@ -1,0 +1,93 @@
+.global {
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(180, 116, 180);
+    padding-bottom:55px;
+}
+
+.logo-position {
+    margin-left:100px;
+    animation:heartBeat;
+    animation-duration:3s;
+}
+
+.cart-position {
+    margin-left:400px;
+    animation:backInLeft;
+    animation-duration:3s;
+}
+
+
+.L1 {
+    display:flex;
+    flex-direction: row;
+    padding-top:50px;
+}
+
+.L2 {
+    margin-top:50px;
+    display:flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:7.5px;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:sandybrown;
+}
+
+h1 {
+    color:sandybrown;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.creds {
+    margin-left:120px
+}
+
+.icons {
+    margin-left:60px
+}
+
+mat-icon{
+    font-size:35px;
+    padding-right:20px;
+}
+
+.left-space {
+    margin-left: 25px;
+}
+
+.search {
+    position:absolute;
+    right:300px;
+    color:white;
+}
+
+mat-hint {
+    color:white;
+}
+
+mat-label {
+    color:white
+}
+
+.ovale {
+    width:800px;
+    height:300px;
+    border-radius: 20%;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 10px red;
+}
+
+.pad {
+    padding-top:20px;
+}

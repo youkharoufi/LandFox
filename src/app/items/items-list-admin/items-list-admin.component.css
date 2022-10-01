@@ -1,0 +1,13 @@
+table{
+    width:75%;
+}
+
+#center{
+    display:flex;
+    justify-content: center;
+}
+
+.btn{
+    text-align:center;
+    margin:15px;
+}

@@ -1,0 +1,35 @@
+<button class="back" mat-raised-button color="primary" (click)="backToShop()"><mat-icon>keyboard_return</mat-icon>Back To Shop</button>
+
+<div class="global">
+    <div>
+    <img [src]="item?.image" style="max-height:450px; max-width:450px">
+</div>
+
+<div class="column">
+    <div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Icon</th>
+            </tr>
+            <tr>
+                <td>{{item?.name}}</td>
+                <td>{{item?.description}}</td>
+                <td>{{item?.price}}</td>
+                <td>{{item?.category.name}}</td>
+                <td><mat-icon>{{item?.category.categoryType}}</mat-icon></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <button mat-flat-button color="accent" (click)="addToCart()">Add To Cart</button>
+    </div>
+</div>
+
+<div class="fox-head">
+    <img src="../../../assets/images/fighting-head-fox-logo.png" width="400px" height="400px">
+</div>
+</div>
